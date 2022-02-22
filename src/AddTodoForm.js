@@ -1,9 +1,10 @@
 import React from "react";
-function AddTodoForm(){
+function AddTodoForm(props){
   const handleAddTodo=(e)=>{
     e.preventDefault()
     let todoTitle=e.target.title.value;
     console.log("todoTitle",todoTitle)
+    props.onAddTodo(todoTitle)
     e.target.reset()
   }
 return(
